@@ -196,6 +196,10 @@ button {  width: auto; overflow: visible; }
 
 
 
+p, ul {
+  margin-top:8px;
+  margin-bottom:8px;
+}
 
  /* Primary Styles
     Author: 
@@ -204,6 +208,7 @@ button {  width: auto; overflow: visible; }
 body {
     background-image:url(/images/carbon_fibre.gif);
     background-repeat:both;
+    font-size:15px;
 }                                        
                   
 header,
@@ -244,6 +249,19 @@ header h1 {
 }
 
 #main {
+  
+} 
+#main .callus {
+  display:block;
+  float:right;
+  background-color:#555;
+  color:white;
+  font-size:180%;
+  font-weight:bold;
+  width:175px;
+  text-align:right;
+  padding:5px;    
+  margin-right:-10px;
 }
 
 #navigation {
@@ -251,17 +269,30 @@ header h1 {
   top:50%;
   right:10px;
   margin-top:-5px;
-}                   
+}     
+
+.adr {
+  margin-left:20px;
+}                 
+
+#mapholder {
+  display:block;
+  width:300px;
+  height:250px;
+  border:thin solid black;
+  float:right;
+}
 
 #navigation ul {
   list-style:none;
-  margin-left:0;
+  margin:0;
 }
 
 #navigation li {
   display:block;
-  width:65px;
+  width:85px;
   float:left;
+  text-align:center;
 }              
 
 #navigation li a,
