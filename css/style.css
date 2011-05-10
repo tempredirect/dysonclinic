@@ -201,31 +201,88 @@ button {  width: auto; overflow: visible; }
     Author: 
  */
 
-
-#container header{
-  padding: 25px 0;
+body {
+    background-image:url(/images/carbon_fibre.gif);
+    background-repeat:both;
+}                                        
+                  
+header,
+#main,
+footer{
+  background-color:white;
+  padding:10px;
+  margin:15px 0;      
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  
 }
+header{
+  padding: 25px 10px;
+  position:relative;
+}                       
+header h1 {
+  font-family: "chaparral-pro-1","chaparral-pro-2",sans-serif;
+  font-weight:600;
+  font-style:normal;
+  
+}         
+.js header h1 {
+  cursor:pointer;
+}
+
 #container {
   width:750px;
   margin-left:auto;
   margin-right:auto;
+/*  background-color:white;*/
+  margin-top:20px;
+  padding:10px;
+}                
+
+#container footer {
+    padding: 15px 10px;
 }
+
 #main {
-  padding-top:10px;
 }
+
+#navigation {
+  position:absolute;
+  top:50%;
+  right:10px;
+  margin-top:-5px;
+}                   
 
 #navigation ul {
-  
+  list-style:none;
+  margin-left:0;
 }
 
+#navigation li {
+  display:block;
+  width:65px;
+  float:left;
+}              
+
+#navigation li a,
+#navigation li a:visited {
+  text-decoration:none; 
+  color:#607890;
+}               
+#navigation li a:hover {
+  text-decoration:underline;
+}       
+
 h1 {
-  font-size:190%;
+  font-size:340%;
 }
 h2 {
   font-size:150%;
+  margin:10px 0;
 }
 h3 {
   font-size:120%;
+  margin:10px 0; 
 }
 
 
