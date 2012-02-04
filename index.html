@@ -17,7 +17,7 @@ service taking only a couple of days.</p>
 <a name="contact-us"></a>
 <h2>Contact us</h2>
 <p> 
-    <div id="mapholder">TODO add map location here</div>
+    <div id="mapholder">Map should be loading</div>
     Our address:
     <div class="adr">
         <div class="street-address">
@@ -38,3 +38,32 @@ service taking only a couple of days.</p>
     </div>
     <div class="clearfix"></div>
 </p>
+
+<script type="text/javascript" charset="utf-8">
+(function(){
+   var map;
+   if(!window.mapsLoading){
+       var script = document.createElement("script");
+       script.type = "text/javascript";
+       script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=gMapInitialize";
+       document.body.appendChild(script);
+       window.mapsLoading = true;
+   }
+   window.gMapInitialize = function (){
+      // http://getlatlon.com   
+      var mapCenter = new google.maps.LatLng( 53.17108700408897, -3.076815605163574 ); 
+      var myOptions = {
+          zoom: 10,
+          center: mapCenter,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+   
+      marker = new google.maps.Marker({
+          map: map,
+          position: mapCenter,
+      });
+   
+   }
+})();
+</script>

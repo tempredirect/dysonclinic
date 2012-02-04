@@ -27,6 +27,7 @@ jekyll --no-auto
 
 #rm "_site/deploy.sh"
 
-scp -r _site/* root@ec2a.logicalpractice.com:/mnt/www/dysonclinic.co.uk
+#scp -r _site/* root@ec2a.logicalpractice.com:/mnt/www/dysonclinic.co.uk
+rsync -av _site/* root@ec2a.logicalpractice.com:/mnt/www/dysonclinic.co.uk
 echo "Fixing persmisions"
-ssh root@ec2a.logicalpractice.com -e "chown -R www-data:www-data"
+ssh root@ec2a.logicalpractice.com 'chown -R www-data:www-data /mnt/www/dysonclinic.co.uk'
