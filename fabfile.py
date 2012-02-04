@@ -1,6 +1,11 @@
 
 from fabric.api import *
 from fabric.operations import local
+from os.path import expanduser
+
+env.user = 'ubuntu'
+env.hosts = ['ec2d.logicalpractice.com']
+env.key_filename = expanduser("~/.ssh/ec2d.pem")
 
 @task
 def deploy():
